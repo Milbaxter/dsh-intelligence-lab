@@ -18,6 +18,8 @@ All state lives in `data/` so a self-hosted machine can run the expensive part a
 - A dashboard for the champion, queue, catalog, runs, reviews, and new plugin ideas.
 - 45 community plugins chosen because they might raise *intelligence* (verification, planning, memory, code search). UI skins and pets are not in the queue.
 - 9 local remixes under `remixes/` — edits of existing ideas: test-first gates, smallest-patch prior, failure notebook, no-web ablation.
+- [100 generalizable plugin ideas](plugin-ideas/README.md) inspired by cognitive architectures,
+  AGI research, and practical remixes, with no benchmark-specific or evaluator-targeting methods.
 - A dry-run scorer so the loop is usable before Docker, SWE-bench images, and API keys exist.
 - A live adapter (`lab/swebench_adapter.py`) that drives DeepSeek Harness and `swebench.harness.run_evaluation`.
 
@@ -90,6 +92,7 @@ src/lib/lab/     loop, scorer, decision, catalog
 lab/             CLI + SWE-bench adapter
 scripts/         Cursor worker + live-machine bootstrap
 remixes/         local DSH plugins under test
+plugin-ideas/    100 generalizable cognitive-plugin experiments
 data/            experiment.json, catalog, ideas, splits, run overlays
 ```
 

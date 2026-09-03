@@ -1,0 +1,7 @@
+- remove:
+    - id: web-search
+    - id: web-fetch
+    - id: browser
+- insert:
+    - id: remix-no-web
+      name: '@lab/remix-no-web'

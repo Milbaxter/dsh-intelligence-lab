@@ -1,0 +1,3 @@
+- insert:
+    - id: remix-failure-notebook
+      name: '@lab/remix-failure-notebook'

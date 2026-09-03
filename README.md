@@ -36,6 +36,10 @@ Open http://127.0.0.1:43173
 # Simulated scores — no API spend. Recovers catalog priors plus noise.
 pnpm lab:run -- --steps 12 --mode dry
 
+# Intelligence wave from the awesome-dsh plugin list
+pnpm lab:prioritize -- --wave intel
+pnpm lab:run -- --steps 8 --mode dry
+
 # Unattended worker: lock, crash resume, optional git commit after each trial
 pnpm lab:daemon -- --mode dry
 # pnpm lab:stop

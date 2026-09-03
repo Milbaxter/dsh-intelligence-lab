@@ -5,7 +5,7 @@ import { resetExperiment, runDaemon, runSteps } from "../src/lib/lab/loop";
 import { requestStop } from "../src/lib/lab/lock";
 import { DEFAULT_CONFIG } from "../src/lib/lab/defaults";
 import { assertCheapEvalModel } from "../src/lib/lab/models";
-import { USER_PRIORITY_BATCH } from "../src/lib/lab/priority";
+import { batchForWave } from "../src/lib/lab/priority";
 import type { LabConfig } from "../src/lib/lab/types";
 
 function args() {
@@ -75,8 +75,11 @@ async function main() {
   }
 
   if (command === "prioritize") {
+    const wave = typeof flags.wave === "string" ? flags.wave : undefined;
     const ids =
-      typeof flags.ids === "string" ? flags.ids.split(",").map((id) => id.trim()) : USER_PRIORITY_BATCH;
+      typeof flags.ids === "string"
+        ? flags.ids.split(",").map((id) => id.trim())
+        : batchForWave(wave);
     const state = prioritizeQueue(ids);
     console.log(
       JSON.stringify(

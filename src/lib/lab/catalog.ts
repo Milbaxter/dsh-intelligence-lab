@@ -927,6 +927,132 @@ export const CATALOG: PluginCandidate[] = [
     breaksCheapEval: true,
     notes: "Real plugin: tianji-qingtian/dsh-model-router.",
   },
+  {
+    id: "superpowers-dsh",
+    name: "superpowers-dsh",
+    repo: "https://github.com/LayneChai/superpowers-dsh",
+    install: "github:LayneChai/superpowers-dsh",
+    kind: "community",
+    category: "skills",
+    hypothesis:
+      "TDD, debugging, and planning skills adapted from obra/superpowers — red/green before the patch.",
+    whyForSweBench:
+      "Lite scoring is hidden tests. A TDD skill is the closest public proxy for that objective.",
+    risk: "low",
+    priorBoostPp: 2.0,
+    distractionPp: 0.3,
+    notes: "From vvlife/awesome-deepseek-harness-plugins (PLUGINS.md).",
+  },
+  {
+    id: "dsh-plugin-verify",
+    name: "dsh-plugin-verify",
+    repo: "https://github.com/863683348/dsh-plugin-verify",
+    install: "github:863683348/dsh-plugin-verify",
+    kind: "community",
+    category: "verification",
+    hypothesis:
+      "Evidence-based claim checking against workspace files with line citations.",
+    whyForSweBench:
+      "Cheap models assert a fix without reading the failing test. Cited evidence should catch that.",
+    risk: "low",
+    priorBoostPp: 1.6,
+    distractionPp: 0.2,
+    notes: "From the awesome-dsh-plugin cross-list linked off vvlife.",
+  },
+  {
+    id: "dsh-lsp-actions",
+    name: "dsh-lsp-actions",
+    repo: "https://github.com/PerryLink/dsh-lsp-actions",
+    install: "github:PerryLink/dsh-lsp-actions",
+    kind: "community",
+    category: "search",
+    hypothesis:
+      "Diagnostics, symbols, rename, and code actions over language servers instead of grep-thrash.",
+    whyForSweBench:
+      "Django Lite bugs often hide in a symbol the test already names. LSP beats glob.",
+    risk: "low",
+    priorBoostPp: 1.8,
+    distractionPp: 0.3,
+    notes: "From vvlife/awesome-deepseek-harness-plugins (PLUGINS.md).",
+  },
+  {
+    id: "dsh-light-memory",
+    name: "dsh-light-memory",
+    repo: "https://github.com/chidaic/dsh-light-memory",
+    install: "github:chidaic/dsh-light-memory",
+    kind: "community",
+    category: "memory",
+    hypothesis:
+      "Four Markdown files (USER/PROJECT/WORKLOG/CONVENTION) with append/distill and prefix-cache-friendly injection.",
+    whyForSweBench:
+      "A PROJECT.md of 'how this repo runs tests' should transfer across lite50 without drowning flash.",
+    risk: "low",
+    priorBoostPp: 1.3,
+    distractionPp: 0.2,
+    notes: "From vvlife/awesome-deepseek-harness-plugins README.",
+  },
+  {
+    id: "dsh-tool-turbo",
+    name: "dsh-tool-turbo",
+    repo: "https://github.com/Electricitysheep/dsh-tool-turbo",
+    install: "github:Electricitysheep/dsh-tool-turbo",
+    kind: "community",
+    category: "runtime",
+    hypothesis:
+      "Downgrade reasoning_effort on simple tool chains, lift it for heavy work. More bash per budget.",
+    whyForSweBench:
+      "Flash already thinks too long between pytest calls. Cutting that latency is cheap intelligence.",
+    risk: "low",
+    priorBoostPp: 0.8,
+    distractionPp: 0.1,
+    notes: "From vvlife/awesome-deepseek-harness-plugins README.",
+  },
+  {
+    id: "dsh-undo",
+    name: "dsh-undo",
+    repo: "https://github.com/LingLambda/dsh-undo",
+    install: "github:LingLambda/dsh-undo",
+    kind: "community",
+    category: "runtime",
+    hypothesis: "Roll model context back to the last completed step and restore it.",
+    whyForSweBench:
+      "Lite fails when the model piles a second wrong edit on the first. Undo is cheaper than turn-rewind.",
+    risk: "medium",
+    priorBoostPp: 1.0,
+    distractionPp: 0.2,
+    notes: "From vvlife/awesome-deepseek-harness-plugins README.",
+  },
+  {
+    id: "dsh-compaction-instant",
+    name: "dsh-compaction-instant",
+    repo: "https://github.com/KitDoesIt/dsh-compaction-instant",
+    install: "github:KitDoesIt/dsh-compaction-instant",
+    kind: "community",
+    category: "context",
+    hypothesis:
+      "LLM-free near-lossless compaction. Replaces summarization with a deterministic conversation compiler.",
+    whyForSweBench:
+      "Does not spend the eval model on summaries, so the failing test is less likely to be dropped.",
+    risk: "low",
+    priorBoostPp: 1.1,
+    distractionPp: 0.2,
+    notes: "From vvlife/awesome-deepseek-harness-plugins (PLUGINS.md).",
+  },
+  {
+    id: "dsh-context-taxonomy",
+    name: "dsh-context-taxonomy",
+    repo: "https://github.com/ArtificialNotImbecile/dsh-context-taxonomy",
+    install: "github:ArtificialNotImbecile/dsh-context-taxonomy",
+    kind: "community",
+    category: "context",
+    hypothesis: "Logical-call context taxonomy so the agent can retrieve the right slice of the log.",
+    whyForSweBench:
+      "Helps if the taxonomy keeps the failing assertion. Hurts if it adds another retrieval tool.",
+    risk: "medium",
+    priorBoostPp: 0.7,
+    distractionPp: 0.4,
+    notes: "From vvlife/awesome-deepseek-harness-plugins README.",
+  },
 ];
 
 export function catalogById(): Map<string, PluginCandidate> {

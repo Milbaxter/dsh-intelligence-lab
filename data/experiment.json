@@ -1,0 +1,96 @@
+{
+  "runs": [
+    {
+      "id": "run_000000",
+      "createdAt": "2026-03-21T21:54:46.369Z",
+      "mode": "baseline",
+      "status": "completed",
+      "task": {
+        "id": "task_000000",
+        "source": "lab-generated",
+        "title": "Implement a small TypeScript helper for stable JSON hashing",
+        "prompt": "Create a TypeScript function that produces a stable hash for JSON-serializable objects. The hash must be independent of key insertion order. Include tests and a short comment explaining the algorithm.",
+        "language": "typescript",
+        "difficulty": "easy",
+        "tags": [
+          "hashing",
+          "json",
+          "typescript"
+        ]
+      },
+      "plan": {
+        "summary": "Add a deterministic JSON hashing helper with tests.",
+        "steps": [
+          "Normalize object key order",
+          "Serialize to a canonical string",
+          "Hash the canonical string",
+          "Cover nested objects and arrays"
+        ],
+        "risks": [
+          "Non-JSON values",
+          "Key-order sensitivity"
+        ],
+        "filesToTouch": [
+          "src/hash.ts",
+          "src/hash.test.ts"
+        ]
+      },
+      "patch": {
+        "summary": "Add stableJsonHash helper and tests.",
+        "diff": "diff --git a/src/hash.ts b/src/hash.ts\nnew file mode 100644\nindex 0000000..1111111\n--- /dev/null\n+++ b/src/hash.ts\n@@ -0,0 +1,18 @@\n+export function stableJsonHash(value: unknown): string {\n+  const canonical = canonicalize(value);\n+  return simpleHash(canonical);\n+}\n+\n+function canonicalize(value: unknown): string {\n+  if (value === null || typeof value !== \"object\") {\n+    return JSON.stringify(value);\n+  }\n+  if (Array.isArray(value)) {\n+    return `[${value.map(canonicalize).join(\",\")}]`;\n+  }\n+  const entries = Object.entries(value as Record<string, unknown>).sort(([a], [b]) => a.localeCompare(b));\n+  return `{${entries.map(([k, v]) => `${JSON.stringify(k)}:${canonicalize(v)}`).join(\",\")}}`;\n+}\n+\n+function simpleHash(input: string): string {\n+  let hash = 2166136261;\n+  for (let i = 0; i < input.length; i += 1) {\n+    hash ^= input.charCodeAt(i);\n+    hash = Math.imul(hash, 16777619);\n+  }\n+  return (hash >>> 0).toString(16).padStart(8, \"0\");\n+}\n",
+        "filesChanged": [
+          "src/hash.ts",
+          "src/hash.test.ts"
+        ]
+      },
+      "review": {
+        "verdict": "pass",
+        "score": 86,
+        "issues": [],
+        "suggestions": [
+          "Document collision risk for the non-cryptographic hash."
+        ]
+      },
+      "result": {
+        "passed": true,
+        "score": 86,
+        "notes": "Canonicalization is order-independent and tests cover nested objects."
+      },
+      "metrics": {
+        "durationMs": 18420,
+        "tokensIn": 2140,
+        "tokensOut": 980,
+        "estimatedCostUsd": 0.0124,
+        "model": "cursor-composer"
+      },
+      "artifacts": [
+        {
+          "kind": "diff",
+          "path": "artifacts/run_000000.diff",
+          "label": "Generated patch"
+        },
+        {
+          "kind": "log",
+          "path": "artifacts/run_000000.log",
+          "label": "Loop transcript"
+        }
+      ]
+    }
+  ],
+  "remixes": [
+    {
+      "id": "remix_000",
+      "createdAt": "2026-03-22T18:11:04.220Z",
+      "parentRunId": "run_000012",
+      "label": "stricter review",
+      "promptDelta": "Raise the review bar and fail if the patch lacks tests.",
+      "changes": [
+        "Require tests",
+        "Reject missing error handling"
+      ],
+      "childRunIds": [
+        "run_000021"
+      ]
+    }
+  ]
+}

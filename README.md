@@ -20,6 +20,8 @@ All state lives in `data/` so a self-hosted machine can run the expensive part a
 - 9 local remixes under `remixes/` — edits of existing ideas: test-first gates, smallest-patch prior, failure notebook, no-web ablation.
 - [100 generalizable plugin ideas](plugin-ideas/README.md) inspired by cognitive architectures,
   AGI research, and practical remixes, with no benchmark-specific or evaluator-targeting methods.
+- A [ranked implementation shortlist](plugin-ideas/PRIORITIES.md) and automated catalog invariant
+  check (`npm run ideas:check`).
 - A dry-run scorer so the loop is usable before Docker, SWE-bench images, and API keys exist.
 - A live adapter (`lab/swebench_adapter.py`) that drives DeepSeek Harness and `swebench.harness.run_evaluation`.
 
@@ -100,4 +102,5 @@ data/            experiment.json, catalog, ideas, splits, run overlays
 
 ```bash
 npm test
+npm run ideas:check
 ```

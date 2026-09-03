@@ -558,12 +558,12 @@ probe designer, and maintainer—instead of asking identical solvers for opinion
 claims supported by role-relevant evidence. **Inspiration:** cognitive diversity. **First trial:**
 remix `dsh-multi-agent-debate` with asymmetric briefs and one shared evidence table.
 
-### 72. Belief-Merging Blackboard
+### 72. Disagreement-to-Probe Resolver
 
-Let agents post claims, evidence, conflicts, and proposed actions to a shared structured blackboard
-without sharing all private reasoning. A coordinator resolves conflicts by gathering evidence, not
-majority vote. **Inspiration:** blackboard systems and Global Workspace Theory. **First trial:** cap
-posts and require provenance for every decision-changing claim.
+When agents disagree, extract the smallest observation on which their predictions diverge and run
+that probe instead of extending the debate. Preserve both hypotheses until the result discriminates
+between them. **Inspiration:** adversarial collaboration and active learning. **First trial:** wrap
+`dsh-multi-agent-debate` with a typed disagreement card and allow one bounded read-only probe.
 
 ### 73. Adversarial Collaboration
 
@@ -586,12 +586,13 @@ cluster answers by mechanism and investigate disagreement. Keep agents blind to 
 avoid social anchoring. **Inspiration:** wisdom of crowds under independence. **First trial:** spend
 parallelism on localization only when repository breadth justifies it.
 
-### 76. Specialist Market
+### 76. Localization Handoff Packet
 
-Specialists bid for tasks using declared capability, expected cost, confidence, and required
-context; the coordinator assigns work and scores realized value afterward. Over time, allocation
-adapts to empirical strengths. **Inspiration:** contract-net protocols and mixture-of-experts
-routing. **First trial:** use fixed specialist profiles before learning bids.
+Require a read-only localizer to return the failing observation, suspect symbol, causal evidence,
+rejected alternatives, and cheapest next command in a fixed schema. The implementer receives this
+packet rather than the localizer’s full trace. **Inspiration:** closed-loop team communication and
+typed working memory. **First trial:** compare packet handoffs with raw transcript handoffs on
+multi-file tasks.
 
 ### 77. Cross-Examination Verifier
 
@@ -621,7 +622,7 @@ verified, reusable knowledge and records dissent. This prevents one agent’s sp
 becoming group fact. **Inspiration:** organizational memory and complementary learning systems.
 **First trial:** require two independent evidence paths or direct reproducibility for shared rules.
 
-## IX. Motivation, adaptation, and resource allocation
+## IX. Adaptation, feedback, and resource allocation
 
 ### 81. Cognitive Needs Regulator
 
@@ -644,12 +645,12 @@ predictive, avoiding both familiar data and irreducible noise. **Inspiration:** 
 compression-progress account of curiosity. **First trial:** reward reductions in a compact model’s
 description length or prediction error on held-out trace events.
 
-### 84. Exploration Debt Meter
+### 84. Progress Pulse
 
-Track when the agent repeatedly exploits one familiar strategy despite unresolved uncertainty or
-stagnation; accrue debt that can be paid by trying a meaningfully different probe. Exploration stays
-bounded by risk and task relevance. **Inspiration:** exploration–exploitation control. **First trial:**
-define diversity by causal intervention, not wording.
+At fixed tool-call intervals, compare compact state snapshots and ask whether uncertainty, evidence,
+or verified completion moved forward. If none improved, require a changed hypothesis or
+information-gaining action. **Inspiration:** metacognitive monitoring and control theory. **First trial:**
+trigger every five calls and classify the result as progress, justified wait, or thrash.
 
 ### 85. Frustration-to-Strategy Shift
 
@@ -665,13 +666,13 @@ remaining work and risk. The plugin can compress, delegate, or narrow search bef
 exhausted. **Inspiration:** homeostatic control and bounded rationality. **First trial:** use
 forecasted rather than fixed per-step budgets.
 
-### 87. Outcome-Based Strategy Evolution
+### 87. Fail–Pass Provenance
 
-Maintain a population of small, interpretable cognitive policies; vary one mechanism at a time and
-retain variants that improve diverse held-out outcomes net of cost. Never optimize against a single
-public benchmark or inspect evaluator internals. **Inspiration:** evolutionary search and
-`dsh-evolve`. **First trial:** evolve trigger thresholds and workflow ordering across rotating task
-families.
+Bind a failing observation and later passing result to the same command, test identity, environment,
+and relevant artifact hashes. Completion can then distinguish causal evidence from unrelated green
+runs. **Inspiration:** controlled experiments and causal intervention. **First trial:** extend the
+existing verification remixes with a red/green evidence record and invalidate it after relevant
+changes.
 
 ### 88. Error Curriculum Builder
 
@@ -694,7 +695,7 @@ or resolves a live uncertainty. Experiments compete on information value and rev
 **Inspiration:** artificial scientist architectures. **First trial:** sandbox generated experiments
 and require an explicit learning target before execution.
 
-## X. Abstraction, representation, and creative reasoning
+## X. Abstraction, representation, and task grounding
 
 ### 91. Sparse Concept Workspace
 
@@ -724,12 +725,13 @@ Retrieve past cases with the same intervention–mechanism–outcome pattern, ad
 the new environment, and predict where transfer may fail. **Inspiration:** case-based and analogical
 reasoning. **First trial:** index episodes by causal roles rather than vocabulary.
 
-### 95. Conceptual Blending Workshop
+### 95. Acceptance Criteria Compiler
 
-Combine two compatible mechanisms from different plugins, state the shared structure and tension,
-then derive one minimal hybrid experiment. Reject blends that are only name-level mashups.
-**Inspiration:** Hofstadter-style analogy and conceptual blending. **First trial:** remix pairs such
-as world-model prediction plus evidence freshness, or global workspace plus specialist markets.
+Compile a request into cited observable behaviors, edge cases, constraints, and explicit non-goals,
+then assign stable identifiers used by plans and evidence. The compiler must preserve ambiguity
+rather than inventing requirements. **Inspiration:** goal representations and requirements
+traceability. **First trial:** add a deterministic schema around `dsh-specflow` and compare its card
+with the original request before edits begin.
 
 ### 96. Minimal Sufficient Representation
 
@@ -759,13 +761,13 @@ predictive accuracy; penalize both baroque stories and simplistic models that mi
 **Inspiration:** minimum description length. **First trial:** score competing diagnoses on evidence
 coverage, complexity, and held-out predictions.
 
-### 100. Architecture Composer
+### 100. Failure Signal Parser
 
-Given a task state, select a small cognitive pipeline from attention, memory, planning, search,
-verification, and learning plugins; record why each component is present and ablate components over
-time. The composer optimizes transfer and net value, not raw plugin count. **Inspiration:** common
-models of cognition and DSH’s existing plugin-stack experiment loop. **First trial:** choose among a
-few hand-audited pipelines, then learn routing only after enough diverse evidence exists.
+Parse noisy compiler and test output into the first actionable exception or assertion, source
+location, relevant symbol, and causal chain while retaining a pointer to the raw log. This is
+perceptual preprocessing, not model-generated summarization. **Inspiration:** task-relevant
+representation and attentional filtering. **First trial:** implement deterministic adapters for
+pytest, unittest, Jest, and common compiler diagnostics behind one normalized observation schema.
 
 ## Research lineage and starting sources
 

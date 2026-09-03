@@ -8,6 +8,7 @@
     "start": "next start --port 43173 --hostname 0.0.0.0",
     "lint": "eslint",
     "test": "tsx src/lib/lab/decision.test.ts && tsx src/lib/lab/apply.test.ts && tsx src/lib/lab/loop.test.ts && tsx src/lib/lab/models.test.ts && tsx src/lib/lab/priority.test.ts",
+    "ideas:check": "node plugin-ideas/validate.mjs",
     "lab": "tsx lab/cli.ts",
     "lab:init": "tsx lab/cli.ts init",
     "lab:run": "tsx lab/cli.ts run",

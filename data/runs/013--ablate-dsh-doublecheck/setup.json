@@ -1,0 +1,13 @@
+{
+  "setupId": "013--ablate-dsh-doublecheck",
+  "pluginIds": [
+    "dsh-proof",
+    "dsh-fail-logger"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger"
+  ],
+  "patchPath": "/workspace/data/runs/013--ablate-dsh-doublecheck/cordis.patch.yml"
+}

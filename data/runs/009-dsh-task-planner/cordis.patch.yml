@@ -1,0 +1,10 @@
+# generated overlay for 009-dsh-task-planner
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-fail-logger
+      name: github:Areium/dsh-fail-logger
+    - id: dsh-task-planner
+      name: github:ztl34245881-commits/dsh-task-planner

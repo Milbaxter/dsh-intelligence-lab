@@ -1,0 +1,6 @@
+# generated overlay for 013--ablate-dsh-doublecheck
+- insert:
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-fail-logger
+      name: github:Areium/dsh-fail-logger

@@ -1,0 +1,10 @@
+# generated overlay for 014-dsh-mcp-bridge
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-fail-logger
+      name: github:Areium/dsh-fail-logger
+    - id: dsh-mcp-bridge
+      name: github:Edge-Echo/dsh-mcp-bridge

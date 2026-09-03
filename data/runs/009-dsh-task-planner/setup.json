@@ -1,0 +1,17 @@
+{
+  "setupId": "009-dsh-task-planner",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-task-planner"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:ztl34245881-commits/dsh-task-planner"
+  ],
+  "patchPath": "/workspace/data/runs/009-dsh-task-planner/cordis.patch.yml"
+}

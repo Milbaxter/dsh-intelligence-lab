@@ -1,0 +1,17 @@
+{
+  "setupId": "006-dsh-pain-point-check",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-pain-point-check"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:ICCuse/dsh-pain-point-check"
+  ],
+  "patchPath": "/workspace/data/runs/006-dsh-pain-point-check/cordis.patch.yml"
+}

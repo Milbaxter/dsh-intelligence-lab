@@ -1,0 +1,17 @@
+{
+  "setupId": "010-dsh-track",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-track"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:fakechris/dsh-track"
+  ],
+  "patchPath": "/workspace/data/runs/010-dsh-track/cordis.patch.yml"
+}

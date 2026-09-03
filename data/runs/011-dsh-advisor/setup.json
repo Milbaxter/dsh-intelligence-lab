@@ -1,0 +1,17 @@
+{
+  "setupId": "011-dsh-advisor",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-advisor"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:btspoony/dsh-advisor"
+  ],
+  "patchPath": "/workspace/data/runs/011-dsh-advisor/cordis.patch.yml"
+}

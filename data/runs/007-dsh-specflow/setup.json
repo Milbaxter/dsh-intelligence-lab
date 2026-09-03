@@ -1,0 +1,17 @@
+{
+  "setupId": "007-dsh-specflow",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-specflow"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:lonelymoon87/dsh-specflow"
+  ],
+  "patchPath": "/workspace/data/runs/007-dsh-specflow/cordis.patch.yml"
+}

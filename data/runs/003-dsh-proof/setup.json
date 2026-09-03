@@ -1,0 +1,13 @@
+{
+  "setupId": "003-dsh-proof",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof"
+  ],
+  "patchPath": "/workspace/data/runs/003-dsh-proof/cordis.patch.yml"
+}

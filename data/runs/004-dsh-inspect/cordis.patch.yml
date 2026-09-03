@@ -1,0 +1,8 @@
+# generated overlay for 004-dsh-inspect
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-inspect
+      name: github:omdsh-dev/dsh-inspect

@@ -1,0 +1,7 @@
+{
+  "setupId": "001-baseline",
+  "pluginIds": [],
+  "profile": "headless",
+  "installSpecs": [],
+  "patchPath": "/workspace/data/runs/001-baseline/cordis.patch.yml"
+}

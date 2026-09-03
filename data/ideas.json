@@ -1,0 +1,23 @@
+[
+  {
+    "id": "idea-hidden-test-shadow",
+    "createdAt": "2026-09-03T06:35:27.457Z",
+    "title": "Hidden-test shadow runner",
+    "pitch": "A plugin that treats the issue body's implied tests as a contract and refuses to finish until a local shadow suite is green. Not the official hidden tests — a reconstructed public proxy.",
+    "status": "inbox"
+  },
+  {
+    "id": "idea-repo-map-card",
+    "createdAt": "2026-09-03T06:35:27.457Z",
+    "title": "One-page repo map",
+    "pitch": "On session start, write a 30-line map: package layout, test runner, how to run one test. Inject it every turn. Cheap models waste the first 10 calls discovering pytest vs django.",
+    "status": "inbox"
+  },
+  {
+    "id": "idea-patch-diff-budget",
+    "createdAt": "2026-09-03T06:35:27.457Z",
+    "title": "Patch diff budget",
+    "pitch": "Hard-cap the working tree diff at 120 lines. If exceeded, the plugin rewinds the extra hunks and asks for a smaller fix. Lite gold patches are tiny.",
+    "status": "inbox"
+  }
+]

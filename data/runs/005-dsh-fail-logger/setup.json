@@ -1,0 +1,15 @@
+{
+  "setupId": "005-dsh-fail-logger",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger"
+  ],
+  "patchPath": "/workspace/data/runs/005-dsh-fail-logger/cordis.patch.yml"
+}

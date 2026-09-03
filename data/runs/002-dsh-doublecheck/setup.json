@@ -1,0 +1,11 @@
+{
+  "setupId": "002-dsh-doublecheck",
+  "pluginIds": [
+    "dsh-doublecheck"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck"
+  ],
+  "patchPath": "/workspace/data/runs/002-dsh-doublecheck/cordis.patch.yml"
+}

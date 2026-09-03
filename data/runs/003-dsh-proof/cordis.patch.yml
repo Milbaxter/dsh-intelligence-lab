@@ -1,0 +1,6 @@
+# generated overlay for 003-dsh-proof
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof

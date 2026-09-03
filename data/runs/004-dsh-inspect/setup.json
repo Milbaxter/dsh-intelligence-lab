@@ -1,0 +1,15 @@
+{
+  "setupId": "004-dsh-inspect",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-inspect"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:omdsh-dev/dsh-inspect"
+  ],
+  "patchPath": "/workspace/data/runs/004-dsh-inspect/cordis.patch.yml"
+}

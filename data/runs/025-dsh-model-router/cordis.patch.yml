@@ -1,0 +1,18 @@
+# generated overlay for 025-dsh-model-router
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-fail-logger
+      name: github:Areium/dsh-fail-logger
+    - id: dsh-plan-and-solve
+      name: github:Optim-Agent/dsh-plans
+    - id: remix-test-first-gate
+      name: file:remixes/test-first-gate
+      config: {}
+    - id: remix-plan-before-edit
+      name: file:remixes/plan-before-edit
+      config: {}
+    - id: dsh-model-router
+      name: github:tianji-qingtian/dsh-model-router

@@ -1,0 +1,20 @@
+{
+  "setupId": "020-dsh-subagent-claude",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-plan-and-solve",
+    "dsh-subagent-claude"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:Optim-Agent/dsh-plans",
+    "github:yaways/dsh-subagent-claude-code-wrapper"
+  ],
+  "patchPath": "/workspace/data/runs/020-dsh-subagent-claude/cordis.patch.yml",
+  "evalModel": "deepseek-v4-flash"
+}

@@ -1,0 +1,22 @@
+{
+  "setupId": "023-remix-plan-before-edit",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-plan-and-solve",
+    "remix-test-first-gate",
+    "remix-plan-before-edit"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:Optim-Agent/dsh-plans",
+    "file:remixes/test-first-gate",
+    "file:remixes/plan-before-edit"
+  ],
+  "patchPath": "/workspace/data/runs/023-remix-plan-before-edit/cordis.patch.yml",
+  "evalModel": "deepseek-v4-flash"
+}

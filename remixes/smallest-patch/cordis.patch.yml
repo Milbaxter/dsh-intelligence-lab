@@ -1,0 +1,3 @@
+- insert:
+    - id: remix-smallest-patch
+      name: '@lab/remix-smallest-patch'

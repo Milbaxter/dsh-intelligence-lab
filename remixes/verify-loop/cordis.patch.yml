@@ -1,0 +1,3 @@
+- insert:
+    - id: remix-verify-loop
+      name: '@lab/remix-verify-loop'

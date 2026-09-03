@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-tool-validator
+      name: '@lab/dsh-tool-validator'

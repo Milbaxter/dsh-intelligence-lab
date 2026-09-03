@@ -1,0 +1,3 @@
+- insert:
+    - id: remix-test-first-gate
+      name: '@lab/remix-test-first-gate'

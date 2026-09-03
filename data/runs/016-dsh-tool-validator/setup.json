@@ -1,0 +1,20 @@
+{
+  "setupId": "016-dsh-tool-validator",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-plan-and-solve",
+    "dsh-tool-validator"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:Optim-Agent/dsh-plans",
+    "file:remixes/tool-validator"
+  ],
+  "patchPath": "/workspace/data/runs/016-dsh-tool-validator/cordis.patch.yml",
+  "evalModel": "deepseek-v4-flash"
+}

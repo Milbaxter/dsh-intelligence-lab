@@ -1,0 +1,13 @@
+# generated overlay for 016-dsh-tool-validator
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-fail-logger
+      name: github:Areium/dsh-fail-logger
+    - id: dsh-plan-and-solve
+      name: github:Optim-Agent/dsh-plans
+    - id: dsh-tool-validator
+      name: file:remixes/tool-validator
+      config: {}

@@ -1,0 +1,18 @@
+{
+  "setupId": "015-dsh-plan-and-solve",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-plan-and-solve"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:Optim-Agent/dsh-plans"
+  ],
+  "patchPath": "/workspace/data/runs/015-dsh-plan-and-solve/cordis.patch.yml",
+  "evalModel": "deepseek-v4-flash"
+}

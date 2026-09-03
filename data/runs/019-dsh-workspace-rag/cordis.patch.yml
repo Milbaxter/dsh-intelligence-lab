@@ -1,0 +1,12 @@
+# generated overlay for 019-dsh-workspace-rag
+- insert:
+    - id: dsh-doublecheck
+      name: github:PerryLink/dsh-doublecheck
+    - id: dsh-proof
+      name: github:EvilIrving/dsh-proof
+    - id: dsh-fail-logger
+      name: github:Areium/dsh-fail-logger
+    - id: dsh-plan-and-solve
+      name: github:Optim-Agent/dsh-plans
+    - id: dsh-workspace-rag
+      name: github:AlowEnsoul/dsh-rag-kb

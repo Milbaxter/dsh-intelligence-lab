@@ -1,0 +1,18 @@
+{
+  "setupId": "014-dsh-mcp-bridge",
+  "pluginIds": [
+    "dsh-doublecheck",
+    "dsh-proof",
+    "dsh-fail-logger",
+    "dsh-mcp-bridge"
+  ],
+  "profile": "headless",
+  "installSpecs": [
+    "github:PerryLink/dsh-doublecheck",
+    "github:EvilIrving/dsh-proof",
+    "github:Areium/dsh-fail-logger",
+    "github:Edge-Echo/dsh-mcp-bridge"
+  ],
+  "patchPath": "/workspace/data/runs/014-dsh-mcp-bridge/cordis.patch.yml",
+  "evalModel": "deepseek-v4-flash"
+}

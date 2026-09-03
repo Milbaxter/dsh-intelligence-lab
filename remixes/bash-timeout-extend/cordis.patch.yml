@@ -1,0 +1,7 @@
+- update:
+    - id: bash
+      config:
+        timeoutMs: 900000
+- insert:
+    - id: remix-bash-timeout-extend
+      name: '@lab/remix-bash-timeout-extend'

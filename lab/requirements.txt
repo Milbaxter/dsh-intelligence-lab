@@ -1,0 +1,4 @@
+# Optional. Only needed for live SWE-bench scoring.
+swebench
+datasets
+deepseek-harness-sdk
